@@ -41,13 +41,16 @@ let uri='mongodb://127.0.0.1:27017/Todo-assignment'
 let options={user:'',pass:''}
 mongoose.set('strictQuery', true);
 mongoose.connect(uri, options, function(error) {
+
    // Check error in initial connection. There is no 2nd param to the callback.
-   if(error){
-      console.log(error);
-   }else{
+   if(!error){
       console.log("connection is success");
+   }else{
+      console.log("connection is failed");
+      
    }
  });
+
 
  // routing implement
 
