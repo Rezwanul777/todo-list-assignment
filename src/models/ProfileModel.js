@@ -6,7 +6,7 @@ const DataSchema=mongoose.Schema({
    emailAddress:{type:String},
    mobileNumber:{type:String},
    city:{type:String},
-   userName:{type:String},
+   userName:{type:String,unique:true},
    password:{type:String},
    //gender:{type:String},
 },{versionKey:false});

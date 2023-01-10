@@ -38,8 +38,8 @@ app.use(limiter)
 
 //Database connection esrtablish
 let uri='mongodb://127.0.0.1:27017/Todo-assignment'
-let options={user:'',pass:''}
-mongoose.set('strictQuery', true);
+let options={user:'',pass:'',autoIndex:true}
+mongoose.set('strictQuery',false);
 mongoose.connect(uri, options, function(error) {
 
    // Check error in initial connection. There is no 2nd param to the callback.
@@ -59,7 +59,7 @@ mongoose.connect(uri, options, function(error) {
  // undefined routing implement
 
  app.use('*',(req,res)=>{
-   res.status(404).json({status:"failed",data:"Not found"})
+   res.status(404).json({status:"not found",data:"failed"})
  })
 
  module.exports=app;
