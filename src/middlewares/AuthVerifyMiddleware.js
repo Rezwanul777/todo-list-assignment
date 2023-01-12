@@ -10,8 +10,8 @@ module.exports=(req,res,next)=>{
       }
       else{
           // get username from decoded token and add req headers
-          let username=decoded['data']['userName']
-          req.headers.username=username;
+          let userName=decoded['data']['userName']
+          req.headers.userName=userName;
          next()
       }
     });

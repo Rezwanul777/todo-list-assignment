@@ -24,6 +24,16 @@ router.put("/UpdateToDo",authVerifyMiddleware,ToDoListController.UpdateToDo)
 // update todo status
 router.put("/UpdateToDoStatus",authVerifyMiddleware,ToDoListController.UpdateToDoStatus)
 
+// delete router 
 
+router.delete("/DeleteToDo",authVerifyMiddleware,ToDoListController.DeleteToDo)
+
+//SelectToDoStatus
+
+router.get("/SelectToDoStatus",authVerifyMiddleware,ToDoListController.SelectToDoStatus)
+
+//SelectToDoByDate
+
+router.get("/SelectToDoByDate",authVerifyMiddleware,ToDoListController.SelectToDoByDate)
 
 module.exports=router;
