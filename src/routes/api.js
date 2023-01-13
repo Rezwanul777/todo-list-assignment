@@ -5,6 +5,8 @@ const authVerifyMiddleware=require('../middlewares/authVerifyMiddleware')
 const router=express.Router();
 
 
+
+// router end point connection
 // Profile routing
 router.post("/CreateProfile",ProfileController.CreateProfile)
 router.post("/UserLogin", ProfileController.UserLogin)
